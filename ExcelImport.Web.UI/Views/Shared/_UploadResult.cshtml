@@ -1,0 +1,36 @@
+﻿@model System.Data.DataSet
+@using System.Data;
+@{
+    int counter = 1;
+}
+
+<div >
+    <table class="gridtable">
+        @foreach (DataTable table in Model.Tables)
+        {
+            if (table.Rows.Count > 0)
+            {
+                <div>
+                    <h3>Upload Errors.</h3>
+                </div>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Sheet Name</th>
+                    <th>Error Message</th>
+                </tr>
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    if (table.Rows[i]["Error"] != "")
+                    {
+                        <tr>
+                            <td>@counter</td>
+                            <td>Sheet1</td>
+                            <td>@table.Rows[i]["Error"].ToString()</td>
+                        </tr>
+                        counter++;
+                    }
+                }
+            }
+        }
+    </table>
+</div>

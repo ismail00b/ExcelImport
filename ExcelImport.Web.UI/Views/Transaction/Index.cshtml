@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ExcelImport.Domain.Entities.Transaction>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>View Transactions</h2>
+<p>
+  
+</p>
+<div>
+    @if (Model.Count() > 0)
+    {
+        
+        var grid = new WebGrid(
+        source: Model,
+        rowsPerPage: 10);
+
+        @grid.GetHtml(
+        tableStyle: "gridtable",
+        columns: grid.Columns(
+          grid.Column("Account"),
+          grid.Column("Description"),
+          grid.Column("CurrencyCode","Currency Code"),
+          grid.Column("Amount")
+        ))
+    }
+    else
+    {
+        <div>No data found</div>
+    }
+    
+   
+</div>
+

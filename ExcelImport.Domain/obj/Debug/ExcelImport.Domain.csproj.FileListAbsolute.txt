@@ -1,0 +1,10 @@
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\ExcelImport.Domain.dll.config
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\ExcelImport.Domain.dll
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\ExcelImport.Domain.pdb
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\EntityFramework.dll
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\EntityFramework.xml
+D:\ExcelImport\ExcelImport.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\ExcelImport\ExcelImport.Domain\obj\Debug\ExcelImport.Domain.csprojResolveAssemblyReference.cache
+D:\ExcelImport\ExcelImport.Domain\obj\Debug\ExcelImport.Domain.dll
+D:\ExcelImport\ExcelImport.Domain\obj\Debug\ExcelImport.Domain.pdb

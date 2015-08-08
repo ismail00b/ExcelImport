@@ -1,0 +1,34 @@
+﻿@model System.Data.DataSet
+
+@using System.Data;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>Upload Excel File</h3>
+
+@if (ViewBag.Error != null)
+{
+    <script type="text/javascript">
+        alert("@ViewBag.Error.ToString()");
+    </script>
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        <label for="file">Filename:</label>
+        <input type="file" name="file" id="file" />
+        <input type="submit" value="Upload File" />
+    </div>
+}
+<p>
+    @if (ViewBag.UploadMsg != null)
+    {
+            <script type="text/javascript">
+                alert("@ViewBag.UploadMsg.ToString()");
+            </script>
+            Html.RenderPartial("~/Views/Shared/_UploadResult.cshtml", Model);
+    }
+
+</p>
